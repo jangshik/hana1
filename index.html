@@ -39,17 +39,19 @@
         alert('비밀번호가 틀렸습니다');
         var inputPassword=sha256(prompt('Password?'));
     }
-
      </script>
-     
-    <input type="button" value="night" onclick="
-    alert('changed to: '+ this.value +' mode')
-    document.querySelector('body').style.backgroundColor='black'
-    document.querySelector('body').style.color='white'">
-    <input type="button" value="day" onclick="
-    alert('changed to: '+ this.value +' mode')
-    document.querySelector('body').style.backgroundColor='white'
-    document.querySelector('body').style.color='black'">    
+     <input type="button" value="night" onclick="
+     // 만약 이 버튼의 value값이 night라면, ~~~
+     if(this.value ==='night'){
+        document.querySelector('body').style.backgroundColor='black'
+        document.querySelector('body').style.color='white';
+        this.value='day';
+     } else {
+        document.querySelector('body').style.backgroundColor='white'
+        document.querySelector('body').style.color='black';
+     this.value='night';
+     }
+     ">
     <div class="container">
             <marquee behavior="alternate" direction="up" height="290">
               <div class="inner-container">
