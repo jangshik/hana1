@@ -2,6 +2,7 @@
 <html>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.js"></script>
 <head>
     <title>WEB</title>
 </head>
@@ -23,22 +24,45 @@
             <h2><marquee direction="left">살려줘</marquee></h2><br>
             <h2><marquee direction="left" scrolldelay="100">살려줘</marquee></h2><br>
             <h2><marquee direction="left" scrolldelay="120">살려줘</marquee></h2><br>
-            <marquee behavior=alternate width="300" scrollamount="1000">반짝</marquee>
             <marquee direction="RIGHT" scrollamount="1"> __@/``</marquee>
             <marquee direction="LEFT" scrollamount="3"> OTL</marquee>
             <marquee direction="RIGHT" scrollamount="5"> __@/``</marquee>
             <marquee direction="RIGHT" scrollamount="5"> @  @　</marquee>
         </div>
-    </div>
+     </div>
+     <script>
+    var myPassword='03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4';
+        var inputPassword=sha256(prompt('Password?'));
+    if(inputPassword===myPassword){
+        alert('비밀번호가 일치합니다');
+    } else{
+        alert('비밀번호가 틀렸습니다');
+        var inputPassword=sha256(prompt('Password?'));
+    }
+
+     </script>
+     
     <input type="button" value="night" onclick="
-    alert('밤이 되었습니다')
+    alert('changed to: '+ this.value +' mode')
     document.querySelector('body').style.backgroundColor='black'
     document.querySelector('body').style.color='white'">
     <input type="button" value="day" onclick="
-    alert('아침이 밝았습니다')
+    alert('changed to: '+ this.value +' mode')
     document.querySelector('body').style.backgroundColor='white'
-    document.querySelector('body').style.color='black'">
-    <div id="disqus_thread"></div>
+    document.querySelector('body').style.color='black'">    
+    <div class="container">
+            <marquee behavior="alternate" direction="up" height="290">
+              <div class="inner-container">
+                <marquee behavior="alternate">
+                  <div class="innermost-container">
+                    <div id="circle"></div>
+                  </div>
+                </marquee>
+              </div>
+            </marquee>
+    </div>
+    
+    <!-- <div id="disqus_thread"></div>
     <script>
     (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
@@ -47,6 +71,6 @@
     (d.head || d.body).appendChild(s);
     })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> -->
 </body>
 </html>

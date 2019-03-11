@@ -23,4 +23,17 @@ border-bottom:1px solid royalblue;
 h2{
     margin:0px;
 }
+.container {
+    width: 530px;
+    height: 290px;
+    background-color: skyblue;
+  }
+  
+  #circle {
+      width: 42px;
+      height: 42px;
+      background-color: white;
+      -moz-border-radius: 21px;
+      border-radius: 21px;
+  }
 }
