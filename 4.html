@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB - WWW</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style2.css">
+    </head>    
+    <body>  
+        <h1>WEB</h1>
+            <div id="container">
+                <ol>
+                    <li><a href="1.html">HTML</a></li>
+                    <li><a href="2.html">CSS</a></li>
+                    <li><a href="3.html">JavaScript</a></li>
+                    <li><a href="index.html">Awww</a></li>
+                </ol>
+            <div id="article">
+                <script>
+                function toNight(){
+                    document.querySelector('body').style.backgroundColor='black';
+                    document.querySelector('body').style.color='white';
+                    
+                    var links = document.querySelectorAll('a');
+                    var i=0;
+                    while(i<links.length){
+                    links[i].style.color = 'yellow';
+                    i=i+1;
+                }   
+            }
+                function toDay(){
+                    document.querySelector('body').style.backgroundColor='white';
+                    document.querySelector('body').style.color='black';
+                    
+                    var links = document.querySelectorAll('a');
+                    var i=0;
+                    while(i<links.length){
+                    links[i].style.color = 'black';
+                    i=i+1;    
+                } 
+            }
+                </script>
+                <input type="button" value="night" onclick="
+                      if(this.value==='night'){
+                        toNight();    
+                        this.value='day';                        
+                    }else{
+                        toDay();
+                        this.value='night';
+                        }                    
+                    ">
+                <h2>World Wide Web</h2>
+                나보다 한살어리네
+            </div>
+        </div>
+    </body>
+</html>
