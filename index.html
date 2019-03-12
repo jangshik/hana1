@@ -6,6 +6,43 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.js"></script>
     <script src="script-index.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', '고통의 종류');
+        data.addColumn('number', '고통의 강도');
+        data.addRows([
+          ['OJT', 3],
+          ['C언어', 2],
+          ['HTML&JavaScript', 4],
+          ['출퇴근', 1],
+          ['기타', 1]
+        ]);
+
+        // Set chart options
+        var options = {'title':'정신적 고통의 수준',
+                       'width':400,
+                       'height':300,
+                       'backgroundColor': 'transparent'}
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
 </head>
 <h1>즐거운 자바스크립트</h1>
 <body>
@@ -31,7 +68,9 @@
             <h3><marquee direction="left" scrolldelay="40">즐거워<span id=asdf4 style="color:white">???</span></marquee></h3><br>
             <h3><marquee direction="right" scrolldelay="180">즐거워<span id=asdf5 style="color:white">???</span></marquee></h3><br>
             <h3><marquee direction="left" scrolldelay="20">즐거워<span id=asdf6 style="color:white">???</span></marquee></h3><br>
+            <div id="chart_div"></div>
         </div>
+        
      </div>
      <!-- <script>
     var myPassword='03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4';
@@ -55,7 +94,7 @@
      <input type="button" value="night" onclick="
      // 만약 이 버튼의 value값이 night라면, ~~~
      if(this.value ==='night'){
-        Color.toNight();
+        Color.toNight();        
         this.value='day';
         
      } else {
@@ -63,7 +102,7 @@
         this.value='night';
      }
      ">
-    <div class="container">
+    <!-- <div class="container">
             <marquee behavior="alternate" direction="up" height="290">
               <div class="inner-container">
                 <marquee behavior="alternate">
@@ -73,7 +112,7 @@
                 </marquee>
               </div>
             </marquee>
-    </div>
+    </div> -->
     
     <!-- <div id="disqus_thread"></div>
     <script>
