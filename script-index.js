@@ -7,6 +7,15 @@ var Color={
         while(i<links.length){
         links[i].style.color='yellow';
         i=i+1;}
+        content.style.color='red';
+        asdf.style.color='red';
+        asdf1.style.color='red';
+        asdf2.style.color='red';
+        asdf3.style.color='red';
+        asdf4.style.color='red';
+        asdf5.style.color='red';
+        asdf6.style.color='red';
+        asdf0.style.color='red';
     },
     toDay: function(){
         document.querySelector('body').style.backgroundColor='white'
@@ -16,6 +25,15 @@ var Color={
         while(i<links.length){
         links[i].style.color='blue';
         i=i+1;}
+        content.style.color='black';
+        asdf.style.color='white';
+        asdf1.style.color='white';
+        asdf2.style.color='white';
+        asdf3.style.color='white';
+        asdf4.style.color='white';
+        asdf5.style.color='white';
+        asdf6.style.color='white';
+        asdf0.style.color='white';
     }
   }
  
