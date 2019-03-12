@@ -4,14 +4,15 @@
         <script>
             var arr=['sunmi', 'sujin', 'jangshik']
             console.log(arr[0]);
+
             var members={
                 'kind' : 'sunmi',
                 'sonar' : 'sujin',
                 'useless' : 'jangshik',
                 'printAllMember':function(){
-                    console.log(members.kind);
-                    console.log(members.sonar);
-                    console.log(members.useless);
+                    console.log(this.kind);
+                    console.log(this.sonar);
+                    console.log(this.useless);
                 }
             }
            console.log(members.printAllmember());

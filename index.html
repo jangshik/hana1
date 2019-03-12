@@ -4,7 +4,8 @@
 <link rel="stylesheet" href="style.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.js"></script>
 <script>
-function toNight(){
+  var Color={
+    toNight: function(){
         document.querySelector('body').style.backgroundColor='black'
         document.querySelector('body').style.color='white';
         var links=document.querySelectorAll('a');
@@ -21,8 +22,8 @@ function toNight(){
         asdf5.style.color='red';
         asdf6.style.color='red';
         asdf0.style.color='red';
-}
-function toDay(){
+    },
+    toDay: function(){
         document.querySelector('body').style.backgroundColor='white'
         document.querySelector('body').style.color='black';
         var links=document.querySelectorAll('a');
@@ -39,7 +40,9 @@ function toDay(){
         asdf5.style.color='white';
         asdf6.style.color='white';
         asdf0.style.color='white';
-}        
+    }
+  }
+ 
 
 function timeanddate(){
   alert(Date());
@@ -103,11 +106,11 @@ function greeting(){
      <input type="button" value="night" onclick="
      // 만약 이 버튼의 value값이 night라면, ~~~
      if(this.value ==='night'){
-        toNight();
+        Color.toNight();
         this.value='day';
         
      } else {
-        toDay();
+        Color.toDay();
         this.value='night';
      }
      ">
