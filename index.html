@@ -3,10 +3,32 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="style.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.js"></script>
+<script>
+function toNight(){
+        document.querySelector('body').style.backgroundColor='black'
+        document.querySelector('body').style.color='white';
+        var links=document.querySelectorAll('a');
+        var i=0;
+        while(i<links.length){
+        links[i].style.color='yellow';
+        i=i+1;}
+        content.style.color='red';
+}
+function toDay(){
+        document.querySelector('body').style.backgroundColor='white'
+        document.querySelector('body').style.color='black';
+        var links=document.querySelectorAll('a');
+        var i=0;
+        while(i<links.length){
+        links[i].style.color='blue';
+        i=i+1;}
+        content.style.color='black';        
+}
+</script>
 <head>
     <title>WEB</title>
 </head>
-<h1>방금했는데 또만드네</h1>
+<h1>즐거운 자바스크립트</h1>
 <body>
     <div id="article">
         <div>
@@ -45,30 +67,12 @@
      <input type="button" value="night" onclick="
      // 만약 이 버튼의 value값이 night라면, ~~~
      if(this.value ==='night'){
-        document.querySelector('body').style.backgroundColor='black'
-        document.querySelector('body').style.color='white';
+        toNight();
         this.value='day';
+        
      } else {
-        document.querySelector('body').style.backgroundColor='white'
-        document.querySelector('body').style.color='black';
-     this.value='night';
-     }
-     ">
-     <input type="button" value="yellow" onclick="
-     if(this.value==='yellow'){
-     var links=document.querySelectorAll('a');
-      var i=0;
-      while(i<links.length){
-      links[i].style.color='yellow';
-       i=i+1;}
-       this.value='black';
-     }else{
-      var links=document.querySelectorAll('a');
-      var i=0;
-      while(i<links.length){
-      links[i].style.color='blue';
-       i=i+1;}
-       this.value='yellow';
+        toDay();
+        this.value='night';
      }
      ">
     <div class="container">
