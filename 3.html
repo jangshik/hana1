@@ -3,6 +3,7 @@
 <head>
 <title>JavaScript</title>
 <meta charset="utf-8">
+<script src="script.js"></script>
 </head>
 
 <body>
@@ -11,6 +12,17 @@
 Javascript is java script<br>
 <br>
 <u><a href="index.html">Back</a></u>
+<input type="button" value="night" onclick="
+     // 만약 이 버튼의 value값이 night라면, ~~~
+     if(this.value ==='night'){
+        Color.toNight();
+        this.value='day';
+        
+     } else {
+        Color.toDay();
+        this.value='night';
+     }
+     ">
 </body>
 </html>
 
