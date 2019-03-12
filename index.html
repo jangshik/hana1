@@ -13,6 +13,14 @@ function toNight(){
         links[i].style.color='yellow';
         i=i+1;}
         content.style.color='red';
+        asdf.style.color='red';
+        asdf1.style.color='red';
+        asdf2.style.color='red';
+        asdf3.style.color='red';
+        asdf4.style.color='red';
+        asdf5.style.color='red';
+        asdf6.style.color='red';
+        asdf0.style.color='red';
 }
 function toDay(){
         document.querySelector('body').style.backgroundColor='white'
@@ -22,7 +30,26 @@ function toDay(){
         while(i<links.length){
         links[i].style.color='blue';
         i=i+1;}
-        content.style.color='black';        
+        content.style.color='black';
+        asdf.style.color='white';
+        asdf1.style.color='white';
+        asdf2.style.color='white';
+        asdf3.style.color='white';
+        asdf4.style.color='white';
+        asdf5.style.color='white';
+        asdf6.style.color='white';
+        asdf0.style.color='white';
+}        
+
+function timeanddate(){
+  alert(Date());
+}
+function sum(left, right){
+  alert(left + right);
+}
+function greeting(){
+  return 'hi';
+  console.log(2);
 }
 </script>
 <head>
@@ -43,15 +70,15 @@ function toDay(){
             </ol>
         </div>
         <div id="content">
-            <h3><marquee direction="left">즐거워</marquee></h3><br>
-            <h3><marquee direction="right" scrolldelay="100">즐거워</marquee></h3><br>
-            <h3><marquee direction="left" scrolldelay="120">즐거워</marquee></h3><br>
-            <h3><marquee direction="left" scrolldelay="140">즐거워</marquee></h3><br>
-            <h3><marquee direction="right" scrolldelay="80">즐거워</marquee></h3><br>
+            <h3><marquee direction="left">즐거워<span id=asdf style="color:white">???</span></marquee></h3><br>
+            <h3><marquee direction="right" scrolldelay="100">즐거워<span id=asdf0 style="color:white">???</span></marquee></h3><br>
+            <h3><marquee direction="left" scrolldelay="120">즐거워<span id=asdf1 style="color:white">???</span></marquee></h3><br>
+            <h3><marquee direction="left" scrolldelay="140">즐거워<span id=asdf2 style="color:white">???</span></marquee></h3><br>
+            <h3><marquee direction="right" scrolldelay="80">즐거워<span id=asdf3 style="color:white">???</span></marquee></h3><br>
             <marquee direction="RIGHT" scrollamount="1"> __@/``</marquee>
-            <h3><marquee direction="left" scrolldelay="40">즐거워</marquee></h3><br>
-            <h3><marquee direction="right" scrolldelay="180">즐거워</marquee></h3><br>
-            <h3><marquee direction="left" scrolldelay="20">즐거워</marquee></h3><br>
+            <h3><marquee direction="left" scrolldelay="40">즐거워<span id=asdf4 style="color:white">???</span></marquee></h3><br>
+            <h3><marquee direction="right" scrolldelay="180">즐거워<span id=asdf5 style="color:white">???</span></marquee></h3><br>
+            <h3><marquee direction="left" scrolldelay="20">즐거워<span id=asdf6 style="color:white">???</span></marquee></h3><br>
         </div>
      </div>
      <!-- <script>
@@ -64,6 +91,15 @@ function toDay(){
         var inputPassword=sha256(prompt('Password?'));
     }
      </script> -->
+     <input type="button" value="1+2" onclick="
+     sum(1,2);
+     ">
+     <input type="button" value='time' onclick="
+     timeanddate();
+     ">
+     <input type="button" value='greeting' onclick="
+     greeting();
+     ">
      <input type="button" value="night" onclick="
      // 만약 이 버튼의 value값이 night라면, ~~~
      if(this.value ==='night'){
